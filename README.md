@@ -1,6 +1,4 @@
-# riverpod_testing
-
-🚀 **Flutter Riverpod Clean Architecture Template**
+ **Flutter Riverpod Clean Architecture Template**
 
 This repository provides a **fast, scalable, and standard Flutter project structure** using **Riverpod** and **Clean Architecture** principles.
 It is designed to help you **develop features quickly**, maintain clean separation of concerns, and scale your app easily.
