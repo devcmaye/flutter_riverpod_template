@@ -71,14 +71,14 @@ lib/
 │       │   │   └── dtos/
 │       │   │       └── template_dto.dart
 │       │   └── repositories/
-│       │       ├── template_repository_impl.dart
+│       │       ├── template_repository.dart
 │       │       └── template_repository_provider.dart
 │       │
 │       ├── domain/
 │       │   ├── entities/
 │       │   │   └── template_entity.dart
 │       │   ├── repositories/
-│       │   │   └── template_repository.dart
+│       │   │   └── template_repository_impl.dart
 │       │   └── usecases/
 │       │       └── template_usecase.dart
 │       │
