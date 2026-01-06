@@ -1,0 +1,103 @@
+# ------------------------------
+
+# Flutter / Dart
+
+# ------------------------------
+
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.buildlog
+.metadata
+
+# Generated files
+
+# **/*.g.dart
+# **/*.freezed.dart
+# **/*.gen.dart
+
+# ------------------------------
+
+# Build outputs
+
+# ------------------------------
+
+build/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/Pods/
+android/.gradle/
+android/app/build/
+android/build/
+
+# ------------------------------
+
+# IDE / Editor
+
+# ------------------------------
+
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# ------------------------------
+
+# MacOS / Windows
+
+# ------------------------------
+
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# ------------------------------
+
+# Logs
+
+# ------------------------------
+
+*.log
+
+# ------------------------------
+
+# Environment / Secrets
+
+# ------------------------------
+
+.env
+.env.*
+firebase_options.dart
+
+# ------------------------------
+
+# Coverage
+
+# ------------------------------
+
+coverage/
+
+# ------------------------------
+
+# Temporary files
+
+# ------------------------------
+
+tmp/
+.cache/
+
+# ------------------------------
+
+# Flutter Version Management
+
+# ------------------------------
+
+.fvm/
+.fvmrc
