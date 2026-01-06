@@ -1,0 +1,52 @@
+
+### Folder Structure  ###
+
+lib/
+├── core/
+│   ├── network/
+│   │    ├── api/
+│   │    │   ├── api_constants.dart
+│   │    │   ├── api_service.dart
+│   │    │   ├── api_service_provider.dart
+│   │    │   └── api_service_provider.g.dart
+│   │    ├── dio/
+│   │    │   └── dio_provider.dart
+│   │    ├── models/
+│   │    │   └── base_response.dart
+│   │    └── error/ 
+│   │        └── failure.dart
+│   └── widgets /                                   // Common widgets (Button , Text Fields, Dialog , etc)
+│
+├── features/
+│   └── template/
+│       ├── data/
+│       │   ├── datasources/
+│       │   │   └── template_remote_datasource.dart
+│       │   ├── models/
+│       │   │   ├── requests/
+│       │   │   │   └── template_request.dart
+│       │   │   ├── responses/
+│       │   │   │   └── template_response.dart
+│       │   │   └── dtos/
+│       │   │       └── template_dto.dart
+│       │   └── repositories/
+│       │       ├── template_repository_impl.dart
+│       │       └── template_repository_provider.dart
+│       │
+│       ├── domain/
+│       │   ├── entities/
+│       │   │   └── template_entity.dart
+│       │   ├── repositories/
+│       │   │   └── template_repository.dart
+│       │   └── usecases/
+│       │       └── template_usecase.dart
+│       │
+│       └── presentation/
+│           ├── providers/
+│           │   └── template_provider.dart
+│           ├── screens/
+│           │   └── template_screen.dart
+│           └── widgets/                                        ## Fretures base widget 
+│               └── template_widget.dart
+│
+└── main.dart  
