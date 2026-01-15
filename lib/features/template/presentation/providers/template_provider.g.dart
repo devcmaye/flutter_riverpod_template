@@ -41,7 +41,7 @@ final class TemplateNotifierProvider
   }
 }
 
-String _$templateNotifierHash() => r'f3e0139cfae73374858151d33f92391c8ef0e6b6';
+String _$templateNotifierHash() => r'3a62d6bae6fc399ef9e40e6be40059d96f7b919e';
 
 abstract class _$TemplateNotifier extends $Notifier<TemplateState> {
   TemplateState build();

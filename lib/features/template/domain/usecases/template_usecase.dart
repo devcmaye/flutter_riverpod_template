@@ -1,24 +1,13 @@
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:riverpod_testing/features/template/data/repositories/repository_provider.dart';
-
 import '../../data/models/request/template_request.dart';
-import '../../data/repositories/template_repository.dart';
+import '../repositories/template_repository.dart';
 import '../entities/template_entity.dart';
 
-part 'template_usecase.g.dart'; // ← Generated file will appear here
+class TemplateUsecase {
+  final TemplateRepository _repository;
 
-@riverpod
-class TemplateUsecaseNotifier extends _$TemplateUsecaseNotifier {
-  late final TemplateRepository _repository;
+  TemplateUsecase(this._repository);
 
-  @override
-  Future<TemplateEntity?> build() async {
-    // Inject repository
-    _repository = ref.read(templateRepositoryProvider);
-    return null;
-  }
-
-  Future<TemplateEntity> call(TemplateRequest request) async {
+  Future<TemplateEntity> execute(TemplateRequest request) {
     return _repository.callTemplate(request);
   }
 }

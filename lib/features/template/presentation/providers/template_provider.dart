@@ -1,9 +1,9 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:riverpod_testing/features/template/domain/usecases/template_usecase.dart';
 import '../../../../core/network/error/failure.dart';
 import '../../data/models/request/template_request.dart';
 import '../../domain/entities/template_entity.dart';
+import '../../domain/usecases/template_usecase.dart';
+import '../../domain/usecases/template_usecase_provider.dart';
 
 part 'template_provider.g.dart';
 
@@ -29,21 +29,26 @@ class TemplateState {
 
 @riverpod
 class TemplateNotifier extends _$TemplateNotifier {
+  late final TemplateUsecase _usecase;
+
   @override
-  TemplateState build() => const TemplateState();
+  TemplateState build() {
+    _usecase = ref.read(templateUsecaseProvider);
+    return const TemplateState();
+  }
 
   Future<void> callTemplate(TemplateRequest request) async {
     state = state.copyWith(isLoading: true, error: null);
+
     try {
-      final usecase = ref.read(templateUsecaseProvider.notifier);
-      final result = await usecase.call(request);
+      final result = await _usecase.execute(request);
+
       state = state.copyWith(data: result, isLoading: false);
     } catch (e) {
-      if (e is Failure) {
-        state = state.copyWith(error: e, isLoading: false);
-      } else {
-        state = state.copyWith(error: Failure(e.toString()), isLoading: false);
-      }
+      state = state.copyWith(
+        isLoading: false,
+        error: e is Failure ? e : Failure(e.toString()),
+      );
     }
   }
 }
